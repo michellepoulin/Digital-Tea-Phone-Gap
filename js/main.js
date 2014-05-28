@@ -27,6 +27,7 @@ var app = {
     {
         if (navigator.notification) 
         {
+            alert('test');
             navigator.notification.alert(message, null, title, 'OK');
         }
         else 
