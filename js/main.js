@@ -1,5 +1,4 @@
 var app = {
-
     findByName: function() {
         console.log('findByName');
         this.store.findByName($('.search-key').val(), function(employees) {
@@ -12,7 +11,6 @@ var app = {
             }
         });
     },
-
     initialize: function() {
         var self = this;
         this.store = new MemoryStore(function()
@@ -24,7 +22,6 @@ var app = {
         // $('.search-key').on('keyup', $.proxy(this.findByName, this));
 
     },
-
     showAlert: function(message, title)
     {
         if (navigator.notification) 
