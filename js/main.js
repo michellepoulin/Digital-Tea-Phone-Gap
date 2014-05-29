@@ -12,6 +12,18 @@ var app = {
             }
         });
     },
+    initialize: function() 
+    {
+        var self = this;
+        this.store = new MemoryStore(function()
+        {
+            self.showAlert('Store initialized', 'Info');
+            // self.renderHomeView();
+        });
+        
+        $('.search-key').on('keyup', $.proxy(this.findByName, this));
+
+    },
     showAlert: function(message, title)
     {
         if (navigator.notification) 
@@ -34,19 +46,8 @@ var app = {
         $('body').html(html);
         $('.search-key').on('keyup', $.proxy(this.findByName, this));
 
-    },
-    initialize: function() 
-    {
-        var self = this;
-        this.store = new MemoryStore(function()
-        {
-            self.showAlert('Store initialized', 'Info');
-            // self.renderHomeView();
-        });
-        
-        $('.search-key').on('keyup', $.proxy(this.findByName, this));
-
     }
+    
 };
 
 app.initialize();
