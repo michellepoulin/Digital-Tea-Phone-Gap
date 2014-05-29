@@ -26,10 +26,10 @@ var app = {
 
     initialize: function() 
     {
-        var self = this;
-        this.store = new MemoryStore(function() 
+        // var self = this;
+        store = new MemoryStore(function() 
         {
-            self.showAlert('Store Initialized', 'Info');
+            showAlert('Store Initialized', 'Info');
         });
         $('.search-key').on('keyup', $.proxy(this.findByName, this));
     }
