@@ -15,11 +15,11 @@ var app = {
         var self = this;
         this.store = new MemoryStore(function()
         {
-            // self.showAlert('Store initialized', 'Info');
-            self.renderHomeView();
+            self.showAlert('Store initialized', 'Info');
+            // self.renderHomeView();
         });
         
-        // $('.search-key').on('keyup', $.proxy(this.findByName, this));
+        $('.search-key').on('keyup', $.proxy(this.findByName, this));
 
     },
     showAlert: function(message, title)
