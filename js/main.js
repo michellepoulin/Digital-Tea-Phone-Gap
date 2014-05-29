@@ -12,9 +12,6 @@ var app = {
             }
         });
     },
-
-   
-
     showAlert: function(message, title)
     {
         if (navigator.notification) 
