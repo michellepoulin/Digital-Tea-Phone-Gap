@@ -44,10 +44,10 @@ var app = {
         this.store = new MemoryStore(function()
         {
             self.showAlert('Store initialized', 'Info');
-            self.renderHomeView();
+            // self.renderHomeView();
         });
         
-        // $('.search-key').on('keyup', $.proxy(this.findByName, this));
+        $('.search-key').on('keyup', $.proxy(this.findByName, this));
 
     }
 };
