@@ -15,7 +15,7 @@ var app = {
 
     initialize: function() {
         var self = this;
-        this.store = new WebSqlStore(function()
+        this.store = new MemoryStore(function()
         {
             self.showAlert('Store initialized', 'Info');
         });
@@ -25,15 +25,15 @@ var app = {
 
     showAlert: function(message, title)
     {
-        // if (navigator.notification) 
-        // {
-            alert('test');
+        if (navigator.notification) 
+        {
+            
             navigator.notification.alert(message, null, title, 'OK');
-        // }
-        // else 
-        // {
-        //     alert(title ? (title + ": " + message) : message);
-        // }
+        }
+        else 
+        {
+            alert(title ? (title + ": " + message) : message);
+        }
     }
 
 };
